@@ -106,6 +106,6 @@ class Frontend {
 		/**
 		 * Load Post Carousel PHP
 		 */
-		require_once LSX_BLOCKS_PLUGIN_PATH . 'src/block-lsx-testimonial/index.php';
+		require_once LSX_BLOCKS_PLUGIN_PATH . 'src/block-lsx-testimonials/index.php';
 	}
 }
