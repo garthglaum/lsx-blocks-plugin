@@ -18,6 +18,6 @@ We offer premium support for this plugin. Premium support that can be purchased 
 
 == Frequently Asked Questions ==
 
-== Changelog ==
+== Change log ==
 
 

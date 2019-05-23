@@ -27,3 +27,8 @@ define( 'LSX_BLOCKS_PLUGIN_VER', '1.2.3' );
 
 //require_once( LSX_BLOCKS_PLUGIN_PATH . 'classes/class-core.php' );
 
+/**
+ * Block Initializer.
+ */
+require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
+
