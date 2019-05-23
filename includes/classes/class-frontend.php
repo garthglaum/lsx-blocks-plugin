@@ -22,6 +22,8 @@ class Frontend {
 		 */
 		public function __construct() {
 			add_filter( 'the_content', array( $this, 'mobile_srcset_tag' ), 10, 1 );
+			add_action( 'plugins_loaded', array( $this, 'blocks_loader' ) );
+			add_action( 'init', array( $this, 'blocks_init' ) );
 		}
 
 		/**
@@ -90,4 +92,26 @@ class Frontend {
 		return $content;
 	}
 
+	/**
+	 * Load the plugin textdomain
+	 */
+	public function blocks_init() {
+		load_plugin_textdomain( 'lsx-blocks-plugin', false, basename( dirname( __FILE__ ) ) . '/languages' );
+	}
+
+	/**
+	 * Loads the block code and the files needed for the block carousel.
+	 */
+	public function blocks_loader() {
+		
+		/**
+		 * Load the blocks functionality
+		 */
+		require_once LSX_BLOCKS_PLUGIN_PATH . 'dist/init.php';
+		
+		/**
+		 * Load Post Carousel PHP
+		 */
+		require_once LSX_BLOCKS_PLUGIN_PATH . 'src/block-lsx-testimonial/index.php';
+	}
 }
