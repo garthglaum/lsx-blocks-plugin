@@ -9,7 +9,7 @@
     <file>src</file>
     <file>tests</file>
 
-    <config name="installed_paths" value="/usr/local/bin/WordPress-Coding-Standards-develop/" />
+    <config name="installed_paths" value="/Users/martinhugo/.composer/vendor/bin/WordPress-Coding-Standards-develop/" />
 
     <exclude-pattern>*/src/Standards/*/Tests/*\.(inc|css|js)$</exclude-pattern>
     <exclude-pattern>*/tests/Core/*/*Test\.(inc|css|js)$</exclude-pattern>
