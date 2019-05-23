@@ -51,7 +51,7 @@ class Frontend {
 	public function mobile_srcset_tag( $content ) {
 		if ( function_exists( 'has_blocks' ) && has_blocks() ) {
 
-			if ( has_block( 'lsx-blocks/lsx-testimonial' ) ) {
+			if ( has_block( 'lsx-blocks/block-lsx-testimonials' ) ) {
 
 				$div_matches = array();
 				preg_match_all('/<div class="lsx-block-post-grid-image">(.*?)<\/div>/s', $content, $div_matches);
