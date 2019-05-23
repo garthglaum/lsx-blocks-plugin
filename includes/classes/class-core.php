@@ -52,8 +52,8 @@ class Core {
 	 * Loads the variable classes and the static classes.
 	 */
 	private function load_classes() {
-		require_once( LSX_BLOCKS_PLUGIN_PATH . 'includes/classes/class-setup.php' );
-		$this->setup = Setup::get_instance();
+		require_once( LSX_BLOCKS_PLUGIN_PATH . 'includes/classes/class-post-types.php' );
+		$this->post_types = Post_Types::get_instance();
 	}
 
 	/**

@@ -31,6 +31,8 @@ function lsx_blocks_plugin() {
 	return \lsx_blocks_plugin\classes\Core::get_instance();
 }
 
+lsx_blocks_plugin();
+
 /**
  * Block Initializer.
  */
