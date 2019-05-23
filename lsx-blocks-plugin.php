@@ -20,15 +20,19 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'LSX_BLOCKS_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'LSX_BLOCKS_PLUGIN_CORE', __FILE__ );
 define( 'LSX_BLOCKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'LSX_BLOCKS_PLUGIN_VER', '1.2.3' );
+define( 'LSX_BLOCKS_PLUGIN_VER', '1.0.0' );
 
 
 /* ======================= Below is the Plugin Class init ========================= */
 
-//require_once( LSX_BLOCKS_PLUGIN_PATH . 'classes/class-core.php' );
+require_once( LSX_BLOCKS_PLUGIN_PATH . 'includes/classes/class-core.php' );
+
+function lsx_blocks_plugin() {
+	return \lsx_blocks_plugin\classes\Core::get_instance();
+}
 
 /**
  * Block Initializer.
  */
-require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
+
 
