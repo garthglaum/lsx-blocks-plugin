@@ -32,7 +32,7 @@ registerBlockType( 'lsx-blocks-plugin/block-lsx-testimonials', {
 	title: __( 'LSX Testimonials', 'lsx-blocks' ),
 	description: __( 'Add a carousel or list of your testimonials', 'lsx-blocks' ),
 	icon: 'images-alt2',
-	category: 'lsx-blocks',
+	category: 'common',
 	keywords: [
 		__( 'testimonial', 'lsx-blocks' ),
 		__( 'lsx', 'lsx-blocks' ),

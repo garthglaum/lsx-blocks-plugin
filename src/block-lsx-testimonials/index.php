@@ -22,7 +22,7 @@ function lsx_blocks_render_block_core_latest_testimonials_carousel( $attributes 
 		'order' => $attributes['orderCarousel'],
 		'orderby' => $attributes['orderByCarousel'],
 		'category' => $categories,
-		'post_type' => 'testimonial',
+		'post_type' => 'post',
 		'suppress_filters' => true,
 	);
 	if ( '' !== $custom_taxonomy && '' !== $custom_terms ) {

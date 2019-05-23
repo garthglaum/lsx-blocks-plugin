@@ -211,6 +211,7 @@ class LatestPostsBlockCarousel extends Component {
 		}
 
 		// Removing posts from display should be instant.
+		console.log(latestPosts);
 		const displayTestimonialsCarousel = latestPosts.length > postsToShowCarousel ?
 			latestPosts.slice( 0, postsToShowCarousel ) :
 			latestPosts;
@@ -348,5 +349,6 @@ export default withSelect( ( select, props ) => {
 	return {
 		latestPosts: getEntityRecords( 'postType', 'post', latestPostsQueryCarousel ),
 		categoriesList: getEntityRecords( 'taxonomy', 'category', categoriesListQueryCarousel ),
+		testing: '{1,2,3}',
 	};
 } )( LatestPostsBlockCarousel );
