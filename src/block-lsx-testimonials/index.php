@@ -22,7 +22,7 @@ function lsx_blocks_render_block_core_latest_posts_carousel( $attributes ) {
 		'order' => $attributes['orderCarousel'],
 		'orderby' => $attributes['orderByCarousel'],
 		'category' => $categories,
-		'post_type' => 'post',
+		'post_type' => 'testimonial',
 		'suppress_filters' => true,
 	);
 	if ( '' !== $custom_taxonomy && '' !== $custom_terms ) {
@@ -210,7 +210,7 @@ function lsx_blocks_register_block_core_latest_posts_carousel() {
 		return;
 	}
 
-	register_block_type( 'lsx-blocks/lsx-post-carousel', array(
+	register_block_type( 'lsx-blocks/block-lsx-testimonials', array(
 		'attributes' => array(
 			'categories' => array(
 				'type' => 'string',
