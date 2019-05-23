@@ -9,7 +9,7 @@
 /**
  * Renders the post carousel block on server.
  */
-function lsx_blocks_render_block_core_latest_posts_carousel( $attributes ) {
+function lsx_blocks_render_block_core_latest_testimonials_carousel( $attributes ) {
 
 	$categories = isset( $attributes['categories'] ) ? $attributes['categories'] : '';
 
@@ -48,7 +48,7 @@ function lsx_blocks_render_block_core_latest_posts_carousel( $attributes ) {
 			// Get the post thumbnail
 			$post_thumb_id = get_post_thumbnail_id( $post_id );
 
-			if ( $post_thumb_id && isset( $attributes['displayPostImageCarousel'] ) && $attributes['displayPostImageCarousel'] ) {
+			if ( $post_thumb_id && isset( $attributes['displayTestimonialImageCarousel'] ) && $attributes['displayTestimonialImageCarousel'] ) {
 				$post_thumb_class = 'has-thumb';
 			} else {
 				$post_thumb_class = 'no-thumb';
@@ -61,7 +61,7 @@ function lsx_blocks_render_block_core_latest_posts_carousel( $attributes ) {
 			);
 
 			// Get the featured image
-			if ( isset( $attributes['displayPostImageCarousel'] ) && $attributes['displayPostImageCarousel'] && $post_thumb_id ) {
+			if ( isset( $attributes['displayTestimonialImageCarousel'] ) && $attributes['displayTestimonialImageCarousel'] && $post_thumb_id ) {
 				if ( 'landscape' === $attributes['imageCrop'] ) {
 					$post_thumb_size = 'lsx-block-post-grid-landscape';
 				} else {
@@ -92,14 +92,14 @@ function lsx_blocks_render_block_core_latest_posts_carousel( $attributes ) {
 				'<div class="lsx-block-post-grid-byline">'
 			);
 
-			if ( isset( $attributes['displayPostAuthorCarousel'] ) && $attributes['displayPostAuthorCarousel'] ) {
+			if ( isset( $attributes['displayTestimonialAuthorCarousel'] ) && $attributes['displayTestimonialAuthorCarousel'] ) {
 				$list_items_markup .= sprintf(
 					'<div class="lsx-block-post-avatar"><img src="%1$s" alt="avatar"/></div>',
 					esc_html( get_avatar_url( $post->post_author ) )
 				);
 			}
 			// Get the post date
-			if ( isset( $attributes['displayPostDateCarousel'] ) && $attributes['displayPostDateCarousel'] ) {
+			if ( isset( $attributes['displayTestimonialDateCarousel'] ) && $attributes['displayTestimonialDateCarousel'] ) {
 				$list_items_markup .= sprintf(
 					'<time datetime="%1$s" class="lsx-block-post-grid-date">%2$s</time>',
 					esc_attr( get_the_date( 'c', $post_id ) ),
@@ -108,7 +108,7 @@ function lsx_blocks_render_block_core_latest_posts_carousel( $attributes ) {
 			}
 
 			// Get the post author
-			if ( isset( $attributes['displayPostAuthorCarousel'] ) && $attributes['displayPostAuthorCarousel'] ) {
+			if ( isset( $attributes['displayTestimonialAuthorCarousel'] ) && $attributes['displayTestimonialAuthorCarousel'] ) {
 				$list_items_markup .= sprintf(
 					'<div class="lsx-block-post-grid-author"><a class="lsx-text-link" href="%2$s">%1$s</a></div>',
 					esc_html( get_the_author_meta( 'display_name', $post->post_author ) ),
@@ -144,11 +144,11 @@ function lsx_blocks_render_block_core_latest_posts_carousel( $attributes ) {
 				$excerpt = null;
 			}
 
-			if ( isset( $attributes['displayPostExcerptCarousel'] ) && $attributes['displayPostExcerptCarousel'] ) {
+			if ( isset( $attributes['displayTestimonialExcerptCarousel'] ) && $attributes['displayTestimonialExcerptCarousel'] ) {
 				$list_items_markup .= wp_kses_post( $excerpt );
 			}
 
-			if ( isset( $attributes['displayPostLinkCarousel'] ) && $attributes['displayPostLinkCarousel'] ) {
+			if ( isset( $attributes['displayTestimonialLinkCarousel'] ) && $attributes['displayTestimonialLinkCarousel'] ) {
 				$list_items_markup .= sprintf(
 					'<p><a class="lsx-block-post-grid-link lsx-text-link" href="%1$s" rel="bookmark">%2$s</a></p>',
 					esc_url( get_permalink( $post_id ) ),
@@ -203,7 +203,7 @@ function lsx_blocks_render_block_core_latest_posts_carousel( $attributes ) {
 /**
  * Registers the `core/latest-posts` block on server.
  */
-function lsx_blocks_register_block_core_latest_posts_carousel() {
+function lsx_blocks_register_block_core_latest_testimonials_carousel() {
 
 	// Check if the register function exists
 	if ( ! function_exists( 'register_block_type' ) ) {
@@ -222,23 +222,23 @@ function lsx_blocks_register_block_core_latest_posts_carousel() {
 				'type' => 'number',
 				'default' => 6,
 			),
-			'displayPostDateCarousel' => array(
+			'displayTestimonialDateCarousel' => array(
 				'type' => 'boolean',
 				'default' => true,
 			),
-			'displayPostExcerptCarousel' => array(
+			'displayTestimonialExcerptCarousel' => array(
 				'type' => 'boolean',
 				'default' => true,
 			),
-			'displayPostAuthorCarousel' => array(
+			'displayTestimonialAuthorCarousel' => array(
 				'type' => 'boolean',
 				'default' => true,
 			),
-			'displayPostImageCarousel' => array(
+			'displayTestimonialImageCarousel' => array(
 				'type' => 'boolean',
 				'default' => true,
 			),
-			'displayPostLinkCarousel' => array(
+			'displayTestimonialLinkCarousel' => array(
 				'type' => 'boolean',
 				'default' => true,
 			),
@@ -279,11 +279,11 @@ function lsx_blocks_register_block_core_latest_posts_carousel() {
 				'default' => '',
 			),
 		),
-		'render_callback' => 'lsx_blocks_render_block_core_latest_posts_carousel',
+		'render_callback' => 'lsx_blocks_render_block_core_latest_testimonials_carousel',
 	) );
 }
 
-add_action( 'init', 'lsx_blocks_register_block_core_latest_posts_carousel' );
+add_action( 'init', 'lsx_blocks_register_block_core_latest_testimonials_carousel' );
 
 
 /**

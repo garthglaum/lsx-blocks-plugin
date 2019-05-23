@@ -47,46 +47,46 @@ class LatestPostsBlockCarousel extends Component {
 	constructor() {
 		super( ...arguments );
 
-		this.toggledisplayPostDateCarousel = this.toggledisplayPostDateCarousel.bind( this );
-		this.toggledisplayPostExcerptCarousel = this.toggledisplayPostExcerptCarousel.bind( this );
-		this.toggledisplayPostAuthorCarousel = this.toggledisplayPostAuthorCarousel.bind( this );
-		this.toggledisplayPostImageCarousel = this.toggledisplayPostImageCarousel.bind( this );
-		this.toggledisplayPostLinkCarousel = this.toggledisplayPostLinkCarousel.bind( this );
+		this.toggledisplayTestimonialDateCarousel = this.toggledisplayTestimonialDateCarousel.bind( this );
+		this.toggledisplayTestimonialExcerptCarousel = this.toggledisplayTestimonialExcerptCarousel.bind( this );
+		this.toggledisplayTestimonialAuthorCarousel = this.toggledisplayTestimonialAuthorCarousel.bind( this );
+		this.toggledisplayTestimonialImageCarousel = this.toggledisplayTestimonialImageCarousel.bind( this );
+		this.toggledisplayTestimonialLinkCarousel = this.toggledisplayTestimonialLinkCarousel.bind( this );
 	}
 
-	toggledisplayPostDateCarousel() {
-		const { displayPostDateCarousel } = this.props.attributes;
+	toggledisplayTestimonialDateCarousel() {
+		const { displayTestimonialDateCarousel } = this.props.attributes;
 		const { setAttributes } = this.props;
 
-		setAttributes( { displayPostDateCarousel: ! displayPostDateCarousel } );
+		setAttributes( { displayTestimonialDateCarousel: ! displayTestimonialDateCarousel } );
 	}
 
-	toggledisplayPostExcerptCarousel() {
-		const { displayPostExcerptCarousel } = this.props.attributes;
+	toggledisplayTestimonialExcerptCarousel() {
+		const { displayTestimonialExcerptCarousel } = this.props.attributes;
 		const { setAttributes } = this.props;
 
-		setAttributes( { displayPostExcerptCarousel: ! displayPostExcerptCarousel } );
+		setAttributes( { displayTestimonialExcerptCarousel: ! displayTestimonialExcerptCarousel } );
 	}
 
-	toggledisplayPostAuthorCarousel() {
-		const { displayPostAuthorCarousel } = this.props.attributes;
+	toggledisplayTestimonialAuthorCarousel() {
+		const { displayTestimonialAuthorCarousel } = this.props.attributes;
 		const { setAttributes } = this.props;
 
-		setAttributes( { displayPostAuthorCarousel: ! displayPostAuthorCarousel } );
+		setAttributes( { displayTestimonialAuthorCarousel: ! displayTestimonialAuthorCarousel } );
 	}
 
-	toggledisplayPostImageCarousel() {
-		const { displayPostImageCarousel } = this.props.attributes;
+	toggledisplayTestimonialImageCarousel() {
+		const { displayTestimonialImageCarousel } = this.props.attributes;
 		const { setAttributes } = this.props;
 
-		setAttributes( { displayPostImageCarousel: ! displayPostImageCarousel } );
+		setAttributes( { displayTestimonialImageCarousel: ! displayTestimonialImageCarousel } );
 	}
 
-	toggledisplayPostLinkCarousel() {
-		const { displayPostLinkCarousel } = this.props.attributes;
+	toggledisplayTestimonialLinkCarousel() {
+		const { displayTestimonialLinkCarousel } = this.props.attributes;
 		const { setAttributes } = this.props;
 
-		setAttributes( { displayPostLinkCarousel: ! displayPostLinkCarousel } );
+		setAttributes( { displayTestimonialLinkCarousel: ! displayTestimonialLinkCarousel } );
 	}
 
 	customizeReadMoreText() {
@@ -98,7 +98,7 @@ class LatestPostsBlockCarousel extends Component {
 
 	render() {
 		const { attributes, categoriesList, setAttributes, latestPosts } = this.props;
-		const { customTaxonomy, customTermID, displayPostDateCarousel, displayPostExcerptCarousel, displayPostAuthorCarousel, displayPostImageCarousel, displayPostLinkCarousel, alignCarousel, columnsCarousel, orderCarousel, orderByCarousel, categories, postsToShowCarousel, width, imageCrop, readMoreText } = attributes;
+		const { customTaxonomy, customTermID, displayTestimonialDateCarousel, displayTestimonialExcerptCarousel, displayTestimonialAuthorCarousel, displayTestimonialImageCarousel, displayTestimonialLinkCarousel, alignCarousel, columnsCarousel, orderCarousel, orderByCarousel, categories, postsToShowCarousel, width, imageCrop, readMoreText } = attributes;
 
 		// Thumbnail options
 		const imageCropOptions = [
@@ -110,7 +110,7 @@ class LatestPostsBlockCarousel extends Component {
 
 		const inspectorControls = (
 			<InspectorControls>
-				<PanelBody title={ __( 'Post Carousel Settings' ) }>
+				<PanelBody title={ __( 'Testimonials Settings' ) }>
 					<QueryControls
 						{ ...{ orderCarousel, orderByCarousel } }
 						numberOfItems={ postsToShowCarousel }
@@ -130,10 +130,10 @@ class LatestPostsBlockCarousel extends Component {
 					/>
 					<ToggleControl
 						label={ __( 'Display Featured Image' ) }
-						checked={ displayPostImageCarousel }
-						onChange={ this.toggledisplayPostImageCarousel }
+						checked={ displayTestimonialImageCarousel }
+						onChange={ this.toggledisplayTestimonialImageCarousel }
 					/>
-					{ displayPostImageCarousel &&
+					{ displayTestimonialImageCarousel &&
 						<SelectControl
 							label={ __( 'Featured Image Style' ) }
 							options={ imageCropOptions }
@@ -143,25 +143,25 @@ class LatestPostsBlockCarousel extends Component {
 					}
 					<ToggleControl
 						label={ __( 'Display Post Author' ) }
-						checked={ displayPostAuthorCarousel }
-						onChange={ this.toggledisplayPostAuthorCarousel }
+						checked={ displayTestimonialAuthorCarousel }
+						onChange={ this.toggledisplayTestimonialAuthorCarousel }
 					/>
 					<ToggleControl
 						label={ __( 'Display Post Date' ) }
-						checked={ displayPostDateCarousel }
-						onChange={ this.toggledisplayPostDateCarousel }
+						checked={ displayTestimonialDateCarousel }
+						onChange={ this.toggledisplayTestimonialDateCarousel }
 					/>
 					<ToggleControl
 						label={ __( 'Display Post Excerpt' ) }
-						checked={ displayPostExcerptCarousel }
-						onChange={ this.toggledisplayPostExcerptCarousel }
+						checked={ displayTestimonialExcerptCarousel }
+						onChange={ this.toggledisplayTestimonialExcerptCarousel }
 					/>
 					<ToggleControl
 						label={ __( 'Display Continue Reading Link' ) }
-						checked={ displayPostLinkCarousel }
-						onChange={ this.toggledisplayPostLinkCarousel }
+						checked={ displayTestimonialLinkCarousel }
+						onChange={ this.toggledisplayTestimonialLinkCarousel }
 					/>
-					{ displayPostLinkCarousel &&
+					{ displayTestimonialLinkCarousel &&
 					<TextControl
 						label={ __( 'Customize Read More Link' ) }
 						type="text"
@@ -211,7 +211,7 @@ class LatestPostsBlockCarousel extends Component {
 		}
 
 		// Removing posts from display should be instant.
-		const displayPostsCarousel = latestPosts.length > postsToShowCarousel ?
+		const displayTestimonialsCarousel = latestPosts.length > postsToShowCarousel ?
 			latestPosts.slice( 0, postsToShowCarousel ) :
 			latestPosts;
 
@@ -251,15 +251,15 @@ class LatestPostsBlockCarousel extends Component {
                             className="slick-list"
                         >
 
-                            { displayPostsCarousel.map( ( post, i ) =>
+                            { displayTestimonialsCarousel.map( ( post, i ) =>
                                 <article
                                     key={ i }
                                     className={ classnames(
-                                        post.featured_image_src && displayPostImageCarousel ? 'has-thumb' : 'no-thumb'
+                                        post.featured_image_src && displayTestimonialImageCarousel ? 'has-thumb' : 'no-thumb'
                                     ) }
                                 >
                                     {
-                                        displayPostImageCarousel && post.featured_image_src !== undefined && post.featured_image_src ? (
+                                        displayTestimonialImageCarousel && post.featured_image_src !== undefined && post.featured_image_src ? (
                                             <div className="lsx-block-post-grid-image">
                                                 <a href={ post.link } target="_blank" rel="bookmark">
                                                     <img
@@ -277,11 +277,11 @@ class LatestPostsBlockCarousel extends Component {
                                         <h2 className="entry-title"><a href={ post.link } target="_blank" rel="bookmark">{ decodeEntities( post.title.rendered.trim() ) || __( '(Untitled)' ) }</a></h2>
 
                                         <div className="lsx-block-post-grid-byline">
-                                            { displayPostAuthorCarousel && post.author_info.display_name &&
+                                            { displayTestimonialAuthorCarousel && post.author_info.display_name &&
                                                 <div className="lsx-block-post-grid-author"><a className="lsx-text-link" target="_blank" href={ post.author_info.author_link }>{ post.author_info.display_name }</a></div>
                                             }
 
-                                            { displayPostDateCarousel && post.date_gmt &&
+                                            { displayTestimonialDateCarousel && post.date_gmt &&
                                                 <time dateTime={ moment( post.date_gmt ).utc().format() } className={ 'lsx-block-post-grid-date' }>
                                                     { moment( post.date_gmt ).local().format( 'MMMM DD, Y' ) }
                                                 </time>
@@ -289,11 +289,11 @@ class LatestPostsBlockCarousel extends Component {
                                         </div>
 
                                         <div className="lsx-block-post-grid-excerpt">
-                                            { displayPostExcerptCarousel && post.excerpt &&
+                                            { displayTestimonialExcerptCarousel && post.excerpt &&
                                                 <div dangerouslySetInnerHTML={ { __html: post.excerpt.rendered } } />
                                             }
 
-                                            { displayPostLinkCarousel &&
+                                            { displayTestimonialLinkCarousel &&
                                                 <p><a className="lsx-block-post-grid-link lsx-text-link" href={ post.link } target="_blank" rel="bookmark">{ readMoreText }</a></p>
                                             }
                                         </div>
