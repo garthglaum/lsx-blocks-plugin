@@ -103,12 +103,6 @@ class Frontend {
 	 * Loads the block code and the files needed for the block carousel.
 	 */
 	public function blocks_loader() {
-		
-		/**
-		 * Load the blocks functionality
-		 */
-		require_once LSX_BLOCKS_PLUGIN_PATH . 'dist/init.php';
-		
 		/**
 		 * Load Post Carousel PHP
 		 */
