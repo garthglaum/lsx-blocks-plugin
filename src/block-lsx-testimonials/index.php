@@ -210,7 +210,7 @@ function lsx_blocks_register_block_core_latest_testimonials_carousel() {
 		return;
 	}
 
-	register_block_type( 'lsx-blocks/block-lsx-testimonials', array(
+	register_block_type( 'lsx-blocks-plugin/block-lsx-testimonials', array(
 		'attributes' => array(
 			'categories' => array(
 				'type' => 'string',

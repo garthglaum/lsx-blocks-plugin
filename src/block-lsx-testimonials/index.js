@@ -28,7 +28,7 @@ const validAlignments = [ 'center', 'wide' ];
 export const name = 'core/latest-posts';
 
 // Register the block
-registerBlockType( 'lsx-blocks/block-lsx-testimonials', {
+registerBlockType( 'lsx-blocks-plugin/block-lsx-testimonials', {
 	title: __( 'LSX Testimonials', 'lsx-blocks' ),
 	description: __( 'Add a carousel or list of your testimonials', 'lsx-blocks' ),
 	icon: 'images-alt2',
