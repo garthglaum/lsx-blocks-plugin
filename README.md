@@ -1,6 +1,5 @@
-[![Build Status](https://travis-ci.com/lightspeeddevelopment/lsx-blocks-plugin.svg?branch=master)](https://travis-ci.com/lightspeeddevelopment/lsx-blocks-plugin)
-
-# LSX Bocks Plugin
+<h1 align="center">LSX Bocks Plugin</h1>
+<p align="center"><img src="https://travis-ci.com/lightspeeddevelopment/lsx-blocks-plugin.svg?branch=master"></p>
 
 The new Gutenberg editor is here, and with it comes the new block editor. 
 
