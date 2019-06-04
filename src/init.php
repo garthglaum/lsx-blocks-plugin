@@ -64,7 +64,7 @@ function lsx_blocks_plugin_cgb_block_assets() { // phpcs:ignore
 	 * @since 1.16.0
 	 */
 	register_block_type(
-		'cgb/block-lsx-blocks-plugin', array(
+		'lsx-block-plugin/block-lsx-blocks-plugin', array(
 			// Enqueue blocks.style.build.css on both frontend & backend.
 			'style'         => 'lsx_blocks_plugin-cgb-style-css',
 			// Enqueue blocks.build.js in the editor only.
@@ -77,3 +77,16 @@ function lsx_blocks_plugin_cgb_block_assets() { // phpcs:ignore
 
 // Hook: Block assets.
 add_action( 'init', 'lsx_blocks_plugin_cgb_block_assets' );
+
+// Add custom block category.
+add_filter( 'block_categories', function( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug'  => 'lsx-blocks-plugin',
+				'title' => __( 'LSX Blocks', 'lsx-blocks' ),
+			),
+		)
+	);
+}, 10, 2 );
