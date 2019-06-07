@@ -37,7 +37,7 @@ class Frontend {
 
 		// If the single instance hasn't been set, set it now.
 		if ( null == self::$instance ) {
-		self::$instance = new self;
+			self::$instance = new self;
 		}
 			return self::$instance;
 		}
@@ -54,7 +54,7 @@ class Frontend {
 			if ( has_block( 'lsx-blocks-plugin/block-lsx-testimonials' ) ) {
 
 				$div_matches = array();
-				preg_match_all('/<div class="lsx-block-post-grid-image">(.*?)<\/div>/s', $content, $div_matches);
+				preg_match_all( '/<div class="lsx-block-post-grid-image">(.*?)<\/div>/s', $content, $div_matches );
 
 				if ( ! empty( $div_matches ) && ! empty( $div_matches[1] ) ) {
 
@@ -86,7 +86,6 @@ class Frontend {
 						}
 					}
 				}
-				//die();
 			}
 		}
 		return $content;

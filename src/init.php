@@ -27,7 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @uses {wp-editor} for WP editor styles.
  * @since 1.0.0
  */
-function lsx_blocks_plugin_cgb_block_assets() { // phpcs:ignore
+function lsx_blocks_plugin_cgb_block_assets() {
+	// phpcs:ignore
 	// Register block styles for both frontend + backend.
 	wp_register_style(
 		'lsx_blocks_plugin-cgb-style-css', // Handle.

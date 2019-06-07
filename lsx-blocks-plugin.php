@@ -2,7 +2,7 @@
 /*
  * Plugin Name: LSX Blocks Plugin
  * Plugin URI:  https://github.com/lightspeeddevelopment/lsx-blocks-plugin
- * Description:	
+ * Description:	The LSX Blocks Plugin works with the new WordPress Gutenberg update to provide you with a range of prebuilt blocks to use on posts and pages.
  * Version:     1.0.0
  * Author:      LightSpeed
  * Author URI:  https://www.lsdev.biz/
