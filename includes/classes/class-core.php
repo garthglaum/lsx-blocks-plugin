@@ -51,6 +51,8 @@ class Core {
 	private function load_classes() {
 		require_once( LSX_BLOCKS_PLUGIN_PATH . 'includes/classes/class-post-types.php' );
 		$this->post_types = Post_Types::get_instance();
+		require_once( LSX_BLOCKS_PLUGIN_PATH . 'includes/classes/class-frontend.php' );
+		$this->frontend = Frontend::get_instance();
 	}
 
 	/**

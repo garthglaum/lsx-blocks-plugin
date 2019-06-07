@@ -11,3 +11,5 @@
 
 import './block/block.js';
 import './block-team/index.js';
+import './block-lsx-testimonials/index.js';
+
