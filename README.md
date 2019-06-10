@@ -1,4 +1,4 @@
-<h1 align="center">LSX Bocks Plugin</h1>
+<h1 align="center">LSX Blocks Plugin</h1>
 <p align="center"><img src="https://travis-ci.com/lightspeeddevelopment/lsx-blocks-plugin.svg?branch=master"></p>
 
 If you’ve heard of the Gutenberg update for WordPress, you should be aware of the new method for building your pages – blocks.
