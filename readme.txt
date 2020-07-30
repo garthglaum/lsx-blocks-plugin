@@ -1,5 +1,5 @@
 === LSX Blocks Plugin ===
-Contributors: feedmymedia
+Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, virginialsdev, deon80, jaab1985, jacquesvdh, ignusvermaak, garthlsdev
 Donate link: https://www.donate.lsdev.biz/
 Tags: Block Builder Plugin, Gutenberg, Block Based Builder, WordPress Plugin, Drag-and-Drop Plugin
 Requires at least: 5.1.1
